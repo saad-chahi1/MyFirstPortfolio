@@ -1,0 +1,111 @@
+<html>
+
+<head>
+	<title>Mon CV</title>
+	<link rel="stylesheet" type="text/css" href="ds2.css">
+	<meta charset="utf-8">
+</head>
+
+<body>
+	<div id="conteneur">
+		<div class="leftside">
+			<div id="telephone"><img src="./loc.png" width="16"><strong><span> RES ELHOUDA IMM 37 NR 9 BD MOHAMED BOUZIANE CASA</span></strong><br><br>
+			<img src="./—Pngtree—telephone symbol icon_2965774.png" width="25"><strong><span> 06 34 21 42 80</span></strong><br><br>
+			<img src="./584856bce0bb315b0f7675ad.png" width="22"><strong><span> saadcode123@gmail.com</span></strong><br></div>
+			<br><br><br><br><br><br><br><br><br><br><br>
+			<h3>MENU :</h3>
+			<h3 ><a href="#" onclick="show('formation');">Formations (Info)</a></h3>
+			<h3><a href="#" onclick="show('competence');">Compétences (Info)</a></h3>
+			<h3><a href="#" onclick="show('loisir');">Loisirs (Info)</a></h3>
+			<hr>
+			<h3>LANGUES :</h3>
+			<h3>Arab</h3>
+			<img src="./ARAB.png" width="280">
+			<h3>Francais</h3>
+			<img src="./English.png" width="280">
+			<h3>English</h3>
+			<img src="./Frensh.png" width="280">
+		</div>
+		<div class="rightside">
+			<img src="./8e64cdb0-c568-4dfa-bab6-7d77b9cc10bc.jpg" class="monImage" alt="saad chahi">
+			<div class="centrer"><h1>Saad Chahi (21 ans)</h1></div>
+			<h2 id="introduction"></h2>
+			<div class="centrer"><strong><span>cliquer sur (Info) pour plus d'information</span></strong></div>
+
+			<div id="formation" style="display: none;"><fieldset><legend><u><h2>Formations :</h2> </u></legend>
+             <strong><span>Acquisition d'un diplome d'Ingénieur (2022-2023) :</span></strong>
+             <dd>Après des années d'études, j'ai finalement eu mon diplome d'Ingénieur en Génie Informatique de l'école nationale des sciences appliquées de safi.</dd>
+             <strong><span>Intégration de l'ENSA (2017-2018) :</span></strong>
+             <dd>Après avoir passer le concours, j'ai intégré l'école nationale des sciences appliquées.</dd>
+             <strong><span>Acquisition de mon baccalauréat (2016-2017) :</span></strong>
+             <dd>J'ai acquis mon baccalauréat en 2017 au lycée Jaafar Elfassi Elfahri à Casablanca, Moulay Rachid .</dd>
+			</fieldset></div>
+
+			<div id="competence" style="display: none;"><fieldset><legend><u><h2>Compétences :</h2> </u></legend>
+				<strong><span>Design et Montage :</span></strong>
+             <dd>je maîtrise bien le logiciel Adobe Photoshop pour faire des Graphiques Design et Sony vegas pro, Premiere Pro Pour le Montage à la perfection et un peu After Effect... </dd>
+             <strong><span>Bureautique : </span></strong>
+             <dd>Word, PowerPoint, Excel, Je maîtrise très bien quelques fonctions de ces logiciels de bureautique Windows surtout PowerPoint.</dd>
+             <strong><span>Programmation Informatique	: </span></strong>
+             <dd>Html5, Javascript, CSS3,SQL et Quelques notions de Programmation et un peu d'experince surtout en java et python et le Design des sites web.</dd>
+			</fieldset></div>
+
+			<div id="loisir" style="display: none;"><fieldset><legend><u><h2>Loisirs :</h2></u></legend>
+             <ul>
+             	<li><strong><span> Football</span></strong></li>
+             	<li><strong><span> Fitness</span></strong></li>
+             	<li><strong><span> Voyages</span></strong></li>
+             </ul>
+			</fieldset></div>
+		</div>
+	</div>
+<SCRIPT LANGUAGE=JavaScript>
+
+  var chaine = "Hi! I'm Saad Chahi, A product designer and a front-end developer ."; 
+  var nb_car = chaine.length; 
+  var tableau = chaine.split("");
+  texte = new Array;
+  var txt = '';
+  var nb_msg = nb_car - 1;
+  for (i=0; i<nb_car; i++) {
+      texte[i] = txt+tableau[i];
+      var txt = texte[i];
+  }
+
+  actual_texte = 0;
+  function changeMessage(){
+      document.getElementById("introduction").innerHTML = texte[actual_texte];
+      actual_texte++;
+      if(actual_texte >= texte.length)
+          actual_texte = nb_msg;
+  }
+  if(document.getElementById)
+     setInterval("changeMessage()",100) /* la vitesse de defilement */
+
+   var divs = ["formation", "competence", "loisir"];
+      var visibleId = null;
+      function show(id) {
+        if(visibleId !== id) {
+          visibleId = id;
+        } 
+        hide();
+      }
+      function hide() {
+        var div, i, id;
+        for(i = 0; i < divs.length; i++) {
+          id = divs[i];
+          div = document.getElementById(id);
+          if(visibleId === id) {
+            div.style.display = "block";
+          } else {
+            div.style.display = "none";
+          }
+        }
+      }  
+
+</SCRIPT>
+
+</body>
+
+
+</html>
